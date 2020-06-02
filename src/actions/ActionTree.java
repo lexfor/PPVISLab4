@@ -93,10 +93,10 @@ public class ActionTree implements src.actions.Actions, src.actions.ControlState
                                 child.setText("cos");
                                 break;
                             case "#":
-                                child.setText("tan");
+                                child.setText("tg");
                                 break;
                             case "$":
-                                child.setText("cot");
+                                child.setText("ctg");
                                 break;
                         }
                         operands.remove(operand);
@@ -115,10 +115,10 @@ public class ActionTree implements src.actions.Actions, src.actions.ControlState
                                 child.setText("cos");
                                 break;
                             case "#":
-                                child.setText("tan");
+                                child.setText("tg");
                                 break;
                             case "$":
-                                child.setText("cot");
+                                child.setText("ctg");
                                 break;
                         }
                         operands.remove(operand);

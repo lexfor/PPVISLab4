@@ -43,11 +43,11 @@ public class InfixToPostfix
         // initializing empty String for result
         String result = new String("");
 
-        exp = exp.replaceAll("(sin|cos|tan|cot|\\*|/|\\+|-|%)", " $1 ");
+        exp = exp.replaceAll("(sin|cos|tg|ctg|\\*|/|\\+|-|%)", " $1 ");
         exp = exp.replaceAll("sin", "!");
         exp = exp.replaceAll("cos", "@");
-        exp = exp.replaceAll("tan", "#");
-        exp = exp.replaceAll("cot", "$");
+        exp = exp.replaceAll("tg", "#");
+        exp = exp.replaceAll("ctg", "$");
 
         // initializing empty stack
         Stack<Character> stack = new Stack<>();

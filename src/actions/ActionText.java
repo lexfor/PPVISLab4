@@ -9,7 +9,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Text;
 
 import src.converter.InfixToPostfix;
-import src.converter.PostToIn;
+import src.converter.PostfixToInfix;
 
 public class ActionText implements src.actions.Actions, src.actions.ControlState {
 
@@ -55,7 +55,7 @@ public class ActionText implements src.actions.Actions, src.actions.ControlState
                     operands.remove(i-1);
                     i--;
                     operands.set(i, String.valueOf(firstOperand + secondOperand));
-                    String nextState = PostToIn.convert(operands);
+                    String nextState = PostfixToInfix.convert(operands);
                     states.add(nextState);
                 }
                 break;
@@ -68,7 +68,7 @@ public class ActionText implements src.actions.Actions, src.actions.ControlState
                     operands.remove(i-1);
                     i--;
                     operands.set(i, String.valueOf(firstOperand - secondOperand));
-                    String nextState = PostToIn.convert(operands);
+                    String nextState = PostfixToInfix.convert(operands);
                     states.add(nextState);
                 }
                 break;
@@ -81,7 +81,7 @@ public class ActionText implements src.actions.Actions, src.actions.ControlState
                     operands.remove(i-1);
                     i--;
                     operands.set(i, String.valueOf(firstOperand * secondOperand));
-                    String nextState = PostToIn.convert(operands);
+                    String nextState = PostfixToInfix.convert(operands);
                     states.add(nextState);
                 }
                 break;
@@ -94,7 +94,7 @@ public class ActionText implements src.actions.Actions, src.actions.ControlState
                     operands.remove(i-1);
                     i--;
                     operands.set(i, String.valueOf(firstOperand / secondOperand));
-                    String nextState = PostToIn.convert(operands);
+                    String nextState = PostfixToInfix.convert(operands);
                     states.add(nextState);
                 }
                 break;
@@ -107,7 +107,7 @@ public class ActionText implements src.actions.Actions, src.actions.ControlState
                     operands.remove(i-1);
                     i--;
                     operands.set(i, String.valueOf(firstOperand % secondOperand));
-                    String nextState = PostToIn.convert(operands);
+                    String nextState = PostfixToInfix.convert(operands);
                     states.add(nextState);
                 }
                 break;
@@ -117,7 +117,7 @@ public class ActionText implements src.actions.Actions, src.actions.ControlState
                     operands.remove(i-1);
                     i--;
                     operands.set(i, String.valueOf(Math.sin(firstOperand)));
-                    String nextState = PostToIn.convert(operands);
+                    String nextState = PostfixToInfix.convert(operands);
                     states.add(nextState);
                 }
                 break;
@@ -127,7 +127,7 @@ public class ActionText implements src.actions.Actions, src.actions.ControlState
                     operands.remove(i-1);
                     i--;
                     operands.set(i, String.valueOf(Math.cos(firstOperand)));
-                    String nextState = PostToIn.convert(operands);
+                    String nextState = PostfixToInfix.convert(operands);
                     states.add(nextState);
                 }
                 break;
@@ -137,7 +137,7 @@ public class ActionText implements src.actions.Actions, src.actions.ControlState
                     operands.remove(i-1);
                     i--;
                     operands.set(i, String.valueOf(Math.tan(firstOperand)));
-                    String nextState = PostToIn.convert(operands);
+                    String nextState = PostfixToInfix.convert(operands);
                     states.add(nextState);
                 }
                 break;
@@ -147,7 +147,7 @@ public class ActionText implements src.actions.Actions, src.actions.ControlState
                     operands.remove(i-1);
                     i--;
                     operands.set(i, String.valueOf(1/Math.tan(firstOperand)));
-                    String nextState = PostToIn.convert(operands);
+                    String nextState = PostfixToInfix.convert(operands);
                     states.add(nextState);
                 }
                 break;

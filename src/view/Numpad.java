@@ -19,7 +19,7 @@ public class Numpad extends Composite {
 
     public Numpad(Composite parent, int style) {
         super(parent, style);
-        Text inputField = ActionText.getTextField().getText();
+        Text inputTextField = ActionText.getTextField().getText();
         this.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 4, 1));
         this.setLayout(new GridLayout(5, true));
 
@@ -27,49 +27,49 @@ public class Numpad extends Composite {
 
         ButtonState redoButton = new ButtonState(this, ">");
 
-        ButtonClear clearButton = new ButtonClear(inputField, "C", this);
+        ButtonClear clearButton = new ButtonClear(inputTextField, "C", this);
 
-        ButtonInput leftBracketButton = new ButtonInput(inputField, "(", this);
+        ButtonInput leftBracketButton = new ButtonInput(inputTextField, "(", this);
 
-        ButtonInput rightBracketButton = new ButtonInput(inputField, ")", this);
+        ButtonInput rightBracketButton = new ButtonInput(inputTextField, ")", this);
 
-        ButtonInput nineButton = new ButtonInput(inputField, "9", this);
+        ButtonInput nineButton = new ButtonInput(inputTextField, "9", this);
 
-        ButtonInput eightButton = new ButtonInput(inputField, "8", this);
+        ButtonInput eightButton = new ButtonInput(inputTextField, "8", this);
 
-        ButtonInput sevenButton = new ButtonInput(inputField, "7", this);
+        ButtonInput sevenButton = new ButtonInput(inputTextField, "7", this);
 
-        ButtonInput plusButton = new ButtonInput(inputField, "+", this);
+        ButtonInput plusButton = new ButtonInput(inputTextField, "+", this);
 
-        ButtonInput minusButton = new ButtonInput(inputField, "-", this);
+        ButtonInput minusButton = new ButtonInput(inputTextField, "-", this);
 
-        ButtonInput sixButton = new ButtonInput(inputField, "6", this);
+        ButtonInput sixButton = new ButtonInput(inputTextField, "6", this);
 
-        ButtonInput fiveButton = new ButtonInput(inputField, "5", this);
+        ButtonInput fiveButton = new ButtonInput(inputTextField, "5", this);
 
-        ButtonInput fourButton = new ButtonInput(inputField, "4", this);
+        ButtonInput fourButton = new ButtonInput(inputTextField, "4", this);
 
-        ButtonInput multiplyButton = new ButtonInput(inputField, "*", this);
+        ButtonInput multiplyButton = new ButtonInput(inputTextField, "*", this);
 
-        ButtonInput divisionButton = new ButtonInput(inputField, "/", this);
+        ButtonInput divisionButton = new ButtonInput(inputTextField, "/", this);
 
-        ButtonInput oneButton = new ButtonInput(inputField, "1", this);
+        ButtonInput oneButton = new ButtonInput(inputTextField, "1", this);
 
-        ButtonInput twoButton = new ButtonInput(inputField, "2", this);
+        ButtonInput twoButton = new ButtonInput(inputTextField, "2", this);
 
-        ButtonInput threeButton = new ButtonInput(inputField, "3", this);
+        ButtonInput threeButton = new ButtonInput(inputTextField, "3", this);
 
-        ButtonInput moduloButton = new ButtonInput(inputField, "%", this);
+        ButtonInput moduloButton = new ButtonInput(inputTextField, "%", this);
 
-        ButtonInvert invertButton = new ButtonInvert(inputField, "1/x", this);
+        ButtonInvert invertButton = new ButtonInvert(inputTextField, "1/x", this);
 
-        ButtonInput zeroButton = new ButtonInput(inputField, "0", this);
+        ButtonInput zeroButton = new ButtonInput(inputTextField, "0", this);
 
-        ButtonInput commButton = new ButtonInput(inputField, ".", this);
+        ButtonInput commButton = new ButtonInput(inputTextField, ".", this);
 
         ButtonEquals equalsButton = new ButtonEquals("=", this);
 
-        ButtonAdd additionalButton = new ButtonAdd("Additional", this, inputField);
+        ButtonAdd additionalButton = new ButtonAdd("Trigonometric function", this, inputTextField);
     }
 
 }

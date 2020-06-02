@@ -11,34 +11,34 @@ import src.actions.ButtonInput;
 
 public class Additional {
 
-    private Text inputField;
+    private Text inputFieldText;
     private Composite parent;
-    private List<ButtonInput> buttons = new ArrayList<>();
+    private List<ButtonInput> Inputbuttons = new ArrayList<>();
     private Point prevSize;
 
     public Additional(Composite parent, Text inputField) {
         this.parent = parent;
-        this.inputField = inputField;
+        this.inputFieldText = inputField;
     }
 
     public void show() {
-        buttons.add(new ButtonInput(inputField, "sin", parent));
+        Inputbuttons.add(new ButtonInput(inputFieldText, "sin", parent));
 
-        buttons.add(new ButtonInput(inputField, "cos", parent));
+        Inputbuttons.add(new ButtonInput(inputFieldText, "cos", parent));
 
-        buttons.add(new ButtonInput(inputField, "tan", parent));
+        Inputbuttons.add(new ButtonInput(inputFieldText, "tg", parent));
 
-        buttons.add(new ButtonInput(inputField, "cot", parent));
+        Inputbuttons.add(new ButtonInput(inputFieldText, "ctg", parent));
         this.prevSize = parent.getSize();
         parent.pack();
         parent.setSize(prevSize);
     }
 
     public void hide() {
-        for(int i = 0; i < buttons.size(); i++) {
-            buttons.get(i).DisposeButton();
+        for(int i = 0; i < Inputbuttons.size(); i++) {
+            Inputbuttons.get(i).DisposeButton();
         }
-        buttons.clear();
+        Inputbuttons.clear();
         parent.pack();
         parent.setSize(prevSize);
     }

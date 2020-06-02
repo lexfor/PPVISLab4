@@ -3,7 +3,7 @@ package src.converter;
 import java.util.List;
 import java.util.Stack;
 
-public class PostToIn {
+public class PostfixToInfix {
 
     public static String convert(List<String> operands){
 
@@ -29,12 +29,12 @@ public class PostToIn {
             }
             else if(operand.equals("#")) {
                 String s1 = stack.pop();
-                String temp = "tan("+s1+")";
+                String temp = "tg("+s1+")";
                 stack.push(temp);
             }
             else if(operand.equals("$")) {
                 String s1 = stack.pop();
-                String temp = "cot("+s1+")";
+                String temp = "ctg("+s1+")";
                 stack.push(temp);
             }
             else {
