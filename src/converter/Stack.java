@@ -11,14 +11,6 @@ class Stack {
         this.stackArray = new char[maxSize];
         top = -1;
     }
-    public void push(char j) {
-
-        stackArray[++top] = j;
-    }
-    public char pop() {
-
-        return stackArray[top--];
-    }
     public char peek() {
 
         return stackArray[top];
@@ -27,4 +19,13 @@ class Stack {
 
         return (top == -1);
     }
+    public void push(char j) {
+
+        stackArray[++top] = j;
+    }
+    public char pop() {
+
+        return stackArray[top--];
+    }
+
 }

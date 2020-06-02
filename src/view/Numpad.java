@@ -7,19 +7,19 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Text;
 
-import src.actions.ButtonAdd;
-import src.actions.ButtonClear;
-import src.actions.ButtonEquals;
-import src.actions.ButtonInput;
-import src.actions.ButtonInvert;
-import src.actions.ActionText;
-import src.actions.ButtonState;
+import src.listners.ButtonAdd;
+import src.listners.ButtonClear;
+import src.listners.ButtonEquals;
+import src.listners.ButtonInput;
+import src.listners.ButtonInvert;
+import src.listners.ListenerText;
+import src.listners.ButtonState;
 
 public class Numpad extends Composite {
 
     public Numpad(Composite parent, int style) {
         super(parent, style);
-        Text inputTextField = ActionText.getTextField().getText();
+        Text inputTextField = ListenerText.getTextField().getText();
         this.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 4, 1));
         this.setLayout(new GridLayout(5, true));
 
@@ -65,11 +65,11 @@ public class Numpad extends Composite {
 
         ButtonInput zeroButton = new ButtonInput(inputTextField, "0", this);
 
-        ButtonInput commButton = new ButtonInput(inputTextField, ".", this);
+        ButtonInput comButton = new ButtonInput(inputTextField, ".", this);
 
-        ButtonEquals equalsButton = new ButtonEquals("=", this);
+        ButtonEquals resultButton = new ButtonEquals("=", this);
 
-        ButtonAdd additionalButton = new ButtonAdd("Trigonometric function", this, inputTextField);
+        ButtonAdd NewFunctionButton = new ButtonAdd("Trigonometric function", this, inputTextField);
     }
 
 }

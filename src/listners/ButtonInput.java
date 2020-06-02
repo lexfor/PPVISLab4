@@ -1,4 +1,4 @@
-package src.actions;
+package src.listners;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
@@ -8,14 +8,14 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Text;
 
-public class ButtonInput implements src.actions.Actions {
+public class ButtonInput implements src.listners.Listeners {
 
-    private Text inputField;
+    private Text inputTextField;
     private String value;
     private Button button;
 
     public ButtonInput(Text inputField, String value, Composite parent) {
-        this.inputField = inputField;
+        this.inputTextField = inputField;
         this.value = value;
         this.button = new Button(parent, SWT.PUSH);
         button.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
@@ -35,7 +35,7 @@ public class ButtonInput implements src.actions.Actions {
 
     @Override
     public void action() {
-        inputField.setText(inputField.getText() + value);
+        inputTextField.setText(inputTextField.getText() + value);
     }
 
 }

@@ -1,13 +1,13 @@
-package src.actions;
+package src.listners;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-import src.actions.Actions;
+import src.listners.Listeners;
 import src.converter.InfixToPostfix;
 
-public class StackCalculator implements Actions {
+public class StackCalculator implements Listeners {
 
     private static StackCalculator calculator;
 
@@ -22,7 +22,7 @@ public class StackCalculator implements Actions {
     }
 
     private void calculate() {
-        String input = src.actions.ActionText.getTextField().getText().getText();
+        String input = src.listners.ListenerText.getTextField().getText().getText();
         var operands = InfixToPostfix.Convert(input);
         Stack<Double> stack = new Stack<>();
         for (var operand : operands) {

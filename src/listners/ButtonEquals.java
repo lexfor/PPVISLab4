@@ -1,4 +1,4 @@
-package src.actions;
+package src.listners;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,12 +10,12 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 
-public class ButtonEquals implements src.actions.Actions {
+public class ButtonEquals implements src.listners.Listeners {
 
     private String value;
     private Button button;
 
-    private List<src.actions.Actions> listeners = new ArrayList<>();
+    private List<src.listners.Listeners> listeners = new ArrayList<>();
 
     public ButtonEquals(String value, Composite parent) {
         this.value = value;
@@ -33,12 +33,12 @@ public class ButtonEquals implements src.actions.Actions {
 
     @Override
     public void action() {
-        if (!src.actions.ActionText.getTextField().getText().getText().isEmpty()) {
-            listeners.add(src.actions.StackCalculator.getCalculator());
-            listeners.add(src.actions.ActionLabel.getLabel());
-            listeners.add(src.actions.ActionText.getTextField());
-            listeners.add(src.actions.ActionTree.getTree());
-            for (src.actions.Actions listener : listeners) {
+        if (!src.listners.ListenerText.getTextField().getText().getText().isEmpty()) {
+            listeners.add(src.listners.StackCalculator.getCalculator());
+            listeners.add(src.listners.ListenerLabel.getLabel());
+            listeners.add(src.listners.ListenerText.getTextField());
+            listeners.add(src.listners.ListenerTree.getTree());
+            for (src.listners.Listeners listener : listeners) {
                 listener.action();
             }
         }

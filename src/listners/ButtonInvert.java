@@ -1,4 +1,4 @@
-package src.actions;
+package src.listners;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
@@ -8,13 +8,13 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Text;
 
-public class ButtonInvert implements src.actions.Actions {
+public class ButtonInvert implements src.listners.Listeners {
 
-    private Text inputField;
+    private Text inputTextField;
     private Button button;
 
     public ButtonInvert(Text inputField, String value, Composite parent) {
-        this.inputField = inputField;
+        this.inputTextField = inputField;
         this.button = new Button(parent, SWT.PUSH);
         button.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
         button.setText(value);
@@ -33,6 +33,6 @@ public class ButtonInvert implements src.actions.Actions {
 
     @Override
     public void action() {
-        inputField.setText("1/(" + inputField.getText() + ")");
+        inputTextField.setText("1/(" + inputTextField.getText() + ")");
     }
 }

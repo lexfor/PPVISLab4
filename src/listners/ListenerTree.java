@@ -1,4 +1,4 @@
-package src.actions;
+package src.listners;
 
 import java.util.Collections;
 import java.util.List;
@@ -11,11 +11,11 @@ import org.eclipse.swt.widgets.TreeItem;
 
 import src.converter.InfixToPostfix;
 
-public class ActionTree implements src.actions.Actions, src.actions.ControlState {
+public class ListenerTree implements src.listners.Listeners, src.listners.ControlState {
 
-    private static ActionTree actionTree;
+    private static ListenerTree actionTree;
 
-    public static ActionTree getTree() {
+    public static ListenerTree getTree() {
         return actionTree;
     }
 
@@ -27,7 +27,7 @@ public class ActionTree implements src.actions.Actions, src.actions.ControlState
     private Tree tree;
 
 
-    public ActionTree(Composite parent) {
+    public ListenerTree(Composite parent) {
         this.parent = parent;
         this.tree = new Tree(parent, SWT.BORDER);
         tree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 3, 1));
@@ -36,7 +36,7 @@ public class ActionTree implements src.actions.Actions, src.actions.ControlState
 
     @Override
     public void action() {
-        String input = src.actions.ActionText.getTextField().getText().getText();
+        String input = src.listners.ListenerText.getTextField().getText().getText();
         var operands = InfixToPostfix.Convert(input);
         Collections.reverse(operands);
         tree.removeAll();

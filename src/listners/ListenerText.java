@@ -1,4 +1,4 @@
-package src.actions;
+package src.listners;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,11 +11,11 @@ import org.eclipse.swt.widgets.Text;
 import src.converter.InfixToPostfix;
 import src.converter.PostfixToInfix;
 
-public class ActionText implements src.actions.Actions, src.actions.ControlState {
+public class ListenerText implements src.listners.Listeners, src.listners.ControlState {
 
-    private static ActionText text;
+    private static ListenerText text;
 
-    public static ActionText getTextField() {
+    public static ListenerText getTextField() {
         return text;
     }
 
@@ -23,7 +23,7 @@ public class ActionText implements src.actions.Actions, src.actions.ControlState
     private int stateIndex = 0;
     private Text inputField;
 
-    public ActionText(Composite parent) {
+    public ListenerText(Composite parent) {
         this.inputField = new Text(parent, SWT.BORDER);
         inputField.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 4, 1));
         this.states = new ArrayList<>();

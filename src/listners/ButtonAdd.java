@@ -1,4 +1,4 @@
-package src.actions;
+package src.listners;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
@@ -10,16 +10,16 @@ import org.eclipse.swt.widgets.Text;
 
 import src.view.Additional;
 
-public class ButtonAdd implements src.actions.Actions {
+public class ButtonAdd implements src.listners.Listeners {
 
-    private Text inputField;
+    private Text inputTextField;
     private Button button;
     private boolean isCollapsed = true;
     private Composite parent;
-    private src.view.Additional additionalNumpad;
+    private src.view.Additional additional;
 
     public ButtonAdd(String value, Composite parent, Text inputField) {
-        this.inputField = inputField;
+        this.inputTextField = inputField;
         this.parent = parent;
         this.button = new Button(parent, SWT.PUSH);
         button.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 2, 1));
@@ -31,16 +31,16 @@ public class ButtonAdd implements src.actions.Actions {
                 action();
             }
         });
-        this.additionalNumpad = new src.view.Additional(parent, inputField);
+        this.additional = new src.view.Additional(parent, inputField);
     }
 
     @Override
     public void action() {
         if(isCollapsed) {
-            additionalNumpad.show();
+            additional.show();
             this.isCollapsed = false;
         } else {
-            additionalNumpad.hide();
+            additional.hide();
             this.isCollapsed = true;
         }
     }

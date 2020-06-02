@@ -7,7 +7,7 @@ import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Text;
 
-import src.actions.ButtonInput;
+import src.listners.ButtonInput;
 
 public class Additional {
 

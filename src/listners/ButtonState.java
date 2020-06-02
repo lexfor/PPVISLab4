@@ -1,4 +1,4 @@
-package src.actions;
+package src.listners;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
@@ -7,7 +7,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 
-public class ButtonState implements src.actions.ControlState, src.actions.Actions {
+public class ButtonState implements src.listners.ControlState, src.listners.Listeners {
 
     private String value;
     private Button button;
@@ -46,14 +46,14 @@ public class ButtonState implements src.actions.ControlState, src.actions.Action
 
     @Override
     public void nextState() {
-        src.actions.ActionText.getTextField().nextState();
-        src.actions.ActionTree.getTree().nextState();
+        src.listners.ListenerText.getTextField().nextState();
+        src.listners.ListenerTree.getTree().nextState();
     }
 
     @Override
     public void previousState() {
-        src.actions.ActionText.getTextField().previousState();
-        src.actions.ActionTree.getTree().previousState();
+        src.listners.ListenerText.getTextField().previousState();
+        src.listners.ListenerTree.getTree().previousState();
     }
 
 }
